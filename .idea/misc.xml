@@ -29,6 +29,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/druid-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/singledatassource/pom.xml" />
+        <option value="$PROJECT_DIR$/multidatasource/pom.xml" />
       </list>
     </option>
   </component>
