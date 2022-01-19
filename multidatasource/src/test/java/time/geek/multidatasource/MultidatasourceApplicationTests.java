@@ -1,4 +1,4 @@
-package com.time.geek.multidatasource;
+package time.geek.multidatasource;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

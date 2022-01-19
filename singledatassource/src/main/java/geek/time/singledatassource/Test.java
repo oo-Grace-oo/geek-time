@@ -1,4 +1,4 @@
-package com.time.geek.singledatassource;
+package geek.time.singledatassource;
 
 import java.util.Map;
 
