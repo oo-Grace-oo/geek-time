@@ -1,8 +1,10 @@
 package geek.time.simple_jdbc_demo.service;
 
 import geek.time.simple_jdbc_demo.dao.dto.Foo;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
@@ -24,11 +26,16 @@ import java.util.List;
  */
 @Slf4j
 @Repository
+//@RequiredArgsConstructor(onConstructor_ = {@Autowired, @Lazy})
 public class FooDao {
     @Autowired
+    @Lazy
     private JdbcTemplate jdbcTemplate;
+    //    private final JdbcTemplate jdbcTemplate;
     @Autowired
+    @Lazy
     private SimpleJdbcInsert simpleJdbcInsert;
+//    private final SimpleJdbcInsert simpleJdbcInsert;
 
     public void insertData() {
         Arrays.asList("b", "c").forEach(bar -> {

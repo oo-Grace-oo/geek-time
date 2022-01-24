@@ -1,8 +1,10 @@
 package geek.time.simple_jdbc_demo.service;
 
 import geek.time.simple_jdbc_demo.dao.dto.Foo;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -24,12 +26,17 @@ import java.util.List;
  */
 @Slf4j
 @Repository
+//@RequiredArgsConstructor(onConstructor_ = {@Autowired, @Lazy})
 public class BatchFooDao {
 
     @Autowired
+    @Lazy
     private JdbcTemplate jdbcTemplate;
+    //    private final JdbcTemplate jdbcTemplate;
     @Autowired
+    @Lazy
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+//    private final NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public void batchInsert() {
         jdbcTemplate.batchUpdate("INSERT INTO FOO (BAR) VALUES (?)",
