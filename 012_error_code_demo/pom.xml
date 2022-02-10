@@ -8,7 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>error_code_demo</artifactId>
+    <artifactId>012_error_code_demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>012_error_code_demo</name>
     <description>Demo project for Spring Boot</description>
